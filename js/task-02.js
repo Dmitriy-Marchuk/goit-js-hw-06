@@ -1,7 +1,7 @@
 // Напиши скрипт, который для каждого элемента массива ingredients:
 
 // Создаст отдельный элемент < li >.Обзательно используй 
-// метод document.createElement().
+//     метод document.createElement().
 
 // Добавит название ингредиента как его текстовое содержимое.
 
@@ -30,4 +30,3 @@ for (const ingredient of ingredients) {
   console.log(li);
 }
 
-// document.ul#ingredients.append(li);
