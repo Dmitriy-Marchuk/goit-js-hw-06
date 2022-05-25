@@ -8,3 +8,23 @@
 
 // Для добавления стилей, используй CSS - классы valid и invalid,
 //     которые мы уже добавили в исходные файлы задания.
+
+
+
+
+const inputElement = document.querySelector("#validation-input");
+inputElement.addEventListener('blur', inputBlurHandler);
+
+function inputBlurHandler({ target }) {
+    const inputLength = target.value.length
+    const neededLength = Number(target.dataset.length)
+    if (inputLength >= neededLength) {
+        target.classList.add('valid');
+        target.classList.remove('invalid');
+        return;
+    };
+    target.classList.add('invalid');
+    target.classList.remove('valid');
+};
+
+

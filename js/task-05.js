@@ -10,6 +10,7 @@ const inputElem = document.querySelector("#name-input");
 const spanElem = document.querySelector("#name-output");
 
 
-inputElem.addEventListener('input', ({currentTarget}) => {
-    spanElem.textContent = currentTarget.value || "Anonymous";
+inputElem.addEventListener('input', ({target}) => {
+    spanElem.textContent = target.value || "Anonymous";
 });
+
