@@ -5,6 +5,7 @@
 // Для создания разметки используй шаблонные строки и метод insertAdjacentHTML().
 
 // Все элементы галереи должны добавляться в DOM за одну операцию вставки.
+
 // Добавь минимальное оформление галереи флексбоксами или гридами через CSS классы.
 
 const images = [
@@ -22,15 +23,21 @@ const images = [
   },
 ];
 
-
-
-
 const galleryList = document.querySelector("ul.gallery");
+
+
+// for (const image of images) {
+//   galleryList.insertAdjacentHTML('afterbegin', `<li>
+//   <img src="${image.url}" alt="${image.alt}" width = "250px" ></img></li>`);
+// };
+
+// imagesMarkup
+
+
+const addGalleryListEl = images.map(image => {
+  return `<li><img src="${image.url}" alt="${image.alt}" width = "250px" ></img></li>`;
+});
+
+galleryList.insertAdjacentHTML('afterbegin', addGalleryListEl.join(''));
+
 galleryList.classList.add('images-box-task1');
-
-for (const image of images) {
-  galleryList.insertAdjacentHTML('afterbegin', `<li>
-  <img src="${image.url}" alt="${image.alt}" width = "250px" ></img></li>`);
-};
-
-console.log(galleryList);

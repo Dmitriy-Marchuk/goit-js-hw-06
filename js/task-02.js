@@ -19,14 +19,25 @@ const ingredients = [
   'Condiments',
 ];
 
-for (const ingredient of ingredients) {
-  const li = document.createElement("li");
-  const ul = document.querySelector("ul#ingredients")
+// for (const ingredient of ingredients) {
+//   const li = document.createElement("li");
+//   const ul = document.querySelector("ul#ingredients")
 
-  li.textContent = ingredient;
-  li.classList.add("item");
-  ul.append(li);
+//   li.textContent = ingredient;
+//   li.classList.add("item");
+//   ul.append(li);
 
-  console.log(li);
-}
+//   console.log(li);
+// }
+
+const ingredientsListRef = document.querySelector("ul#ingredients")
+
+const ingredientsElement = ingredients.forEach(ingredientName => {
+  const ingredientItem = document.createElement('li');
+  ingredientItem.textContent = ingredientName;
+  ingredientItem.classList.add('item')
+  ingredientsListRef.append(ingredientItem)
+});
+
+
 

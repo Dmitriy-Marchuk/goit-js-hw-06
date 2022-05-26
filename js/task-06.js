@@ -18,7 +18,7 @@ inputElement.addEventListener('blur', inputBlurHandler);
 function inputBlurHandler({ target }) {
     const inputLength = target.value.length
     const neededLength = Number(target.dataset.length)
-    if (inputLength >= neededLength) {
+    if (inputLength === neededLength) {
         target.classList.add('valid');
         target.classList.remove('invalid');
         return;
