@@ -31,20 +31,11 @@ const ingredientsElement = ingredients.map(ingredientName => {
 
   ingredientItem.textContent = ingredientName;
   ingredientItem.classList.add('item')
-  ingredientsListRef.append(ingredientItem)
+  return ingredientItem;
+
 });
+ingredientsListRef.append(...ingredientsElement)
+  
 
 
 
-
-
-// for (const ingredient of ingredients) {
-//   const li = document.createElement("li");
-//   const ul = document.querySelector("ul#ingredients")
-
-//   li.textContent = ingredient;
-//   li.classList.add("item");
-//   ul.append(li);
-
-//   console.log(li);
-// }
